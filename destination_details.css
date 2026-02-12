@@ -1,0 +1,319 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* ================= OVERVIEW SECTION ================= */
+.overview-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 60px 80px;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  background: #eef3ff;
+  color: #3b5bdb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* About text */
+.overview-text-full h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.overview-desc {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ================= WIDGET ROW (THE FIX) ================= */
+.overview-widgets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+  align-items: stretch;
+}
+
+/* ================= QUICK INFO & CURRENCY ================= */
+.quick-info-widget {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.quick-info-widget h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-card {
+  background: #e8e6e6;
+  padding: 18px 22px;
+  border-radius: 14px;
+  flex: 1 1 180px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card strong {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.info-card span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* ================= WEATHER ================= */
+.weather-widget {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.weather-widget h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.weather-time {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.weather-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather-card img {
+  width: 90px;
+  height: 90px;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.weather-details .temp {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.weather-details span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  color: #fff;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ================= TABS ================= */
+.tabs {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  display: flex;
+  gap: 30px;
+  padding: 15px 60px;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #555;
+  position: relative;
+}
+
+.tabs button:hover {
+  color: #000;
+}
+
+.tabs button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #000;
+}
+
+/* ================= TAB CONTENT ================= */
+.tab-content {
+  display: none;
+  padding: 50px 60px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ================= GRID CARDS ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px;
+  font-size: 18px;
+}
+
+.card p,
+.card span,
+.card strong {
+  margin: 0 15px 15px;
+  font-size: 14px;
+  color: #666;
+}
+.hero-top .logo {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* button.css */
+
+/* ================= GET STARTED BUTTON ================= */
+.get-started {
+    all: unset; /* removes all default button styles */
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #2f89a8, #256f86);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(47, 137, 168, 0.35);
+    text-align: center;
+    text-decoration: none;
+}
+
+.get-started:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #256f86, #1f5e70);
+    box-shadow: 0 14px 30px rgba(31, 94, 112, 0.45);
+}
+
+/* Optional: center button in a section */
+.get-started-section {
+    display: flex;
+    flex-direction: column; /* stack buttons vertically */
+    align-items: center;    /* center horizontally */
+    gap: 20px;              /* space between buttons */
+    margin: 50px 0;         /* top & bottom spacing */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .overview-widgets {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-container {
+    padding: 40px 30px;
+  }
+
+  .hero-text {
+    left: 30px;
+  }
+
+  .tabs {
+    padding: 15px 30px;
+  }
+}

@@ -1,0 +1,211 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ================= ROOM ACTIONS ================= */
+.room-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.room-actions button {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.room-actions button:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= ROOM CODE ================= */
+#roomCodeBox {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+/* ================= CHAT BOX ================= */
+.chat-box {
+    max-height: 300px;
+    overflow-y: auto;
+    background: #f1f5f9;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.chat-message.system {
+    background: #e2e8f0;
+    color: #334155;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.chat-message.user {
+    background: #2563eb;
+    color: white;
+    margin-left: auto;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.chat-input button {
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= TRIP FORM ================= */
+#tripForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    font-size: 15px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* ================= TABS ================= */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.tab-btn {
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.tab-btn:hover {
+    background: #e0f2fe;
+}
+
+.tab-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #1d4ed8;
+}
+
+/* ================= CHECKBOX GROUP ================= */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+.submit-btn {
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .chat-message {
+        max-width: 90%;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+}
