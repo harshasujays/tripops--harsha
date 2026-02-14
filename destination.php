@@ -14,16 +14,6 @@ if($conn->connect_error){
 
 // Fetch destinations
 $destinations = [];
-// Fetch 3 random trending destinations
-$trending = [];
-$trendSql = "SELECT * FROM destinations ORDER BY RAND() LIMIT 3";
-$trendResult = $conn->query($trendSql);
-
-if ($trendResult->num_rows > 0) {
-    while ($row = $trendResult->fetch_assoc()) {
-        $trending[] = $row;
-    }
-}
 
 $sql = "SELECT * FROM destinations";
 $result = $conn->query($sql);
@@ -113,29 +103,6 @@ if($result->num_rows > 0){
         <button class="scroll-btn right" onclick="scrollDestinations(1)">&#10095;</button>
     </div>
 </section>
-<!-- ================= TRENDING NOW ================= -->
-<section class="trending-section">
-    <div class="trending-header">
-        <h2>Trending Now 🔥</h2>
-        <p>Destinations travellers are loving right now</p>
-    </div>
-
-    <div class="trending-grid">
-        <?php foreach ($trending as $place): ?>
-            <a href="destination_details.php?place=<?= urlencode($place['slug']) ?>"
-               class="trending-card">
-
-                <img src="<?= $place['image'] ?>" alt="<?= $place['name'] ?>">
-
-                <div class="trending-overlay">
-                    <span class="trending-badge">Trending</span>
-                    <h3><?= $place['name'] ?></h3>
-                    <p><?= $place['country'] ?> • <?= ucfirst($place['category']) ?></p>
-                </div>
-            </a>
-        <?php endforeach; ?>
-    </div>
-</section>
 
 <section class="map-section">
     <div class="map-header">
@@ -201,7 +168,7 @@ document.addEventListener("click", e => {
 });
 
 // ================= HERO SLIDESHOW =================
-const images = ['hallstatt.jpg','sydney.jpg','zurich.jpg','dest4.jpg','queen.jpg','dest5.jpg','sydney.jpg','dest1.jpg'];
+const images = ['destinations/hallstatt.jpg','destinations/sydney.jpg','destinations/zurich.jpg','slideshow/dest4.jpg','destinations/queen.jpg','slideshow/dest5.jpg','destinations/sydney.jpg',];
 let index = 0, showFirst = true;
 const bg1 = document.querySelector('.bg1');
 const bg2 = document.querySelector('.bg2');
@@ -271,3 +238,12 @@ L.marker([lat, lon], { icon: customIcon })
 
 </body>
 </html>
+<?php
+// Get the current filename
+$current_file = basename($_SERVER['PHP_SELF']);
+
+// Only show if the current page is NOT landing.php
+if ($current_file !== 'landing.php') {
+    include 'popup.php';
+}
+?>

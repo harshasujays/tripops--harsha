@@ -218,3 +218,12 @@ function showTab(id){
 
 </body>
 </html>
+<?php
+// Get the current filename
+$current_file = basename($_SERVER['PHP_SELF']);
+
+// Only show if the current page is NOT landing.php
+if ($current_file !== 'landing.php') {
+    include 'popup.php';
+}
+?>
